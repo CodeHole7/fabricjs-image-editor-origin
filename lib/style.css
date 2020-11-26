@@ -45,6 +45,7 @@ body {
 .main-panel {
   height: calc(100% - 54px);
   display: flex;
+  position: relative;
 }
 
 .canvas-holder {
@@ -62,20 +63,35 @@ body {
 .toolpanel {
   background-color: #f9f9f9;
   width: 300px;
+  top: 0;
+  left: 0;
   height: 100%;
   border: 1px solid #ddd;
   transition: all .4s;
   box-sizing: border-box;
-  padding: 20px;
   text-align: left;
   font-size: 13px;
   color: #777;
   display: none;
-  overflow: auto;
+  position: absolute;
+  z-index: 9999;
+}
+
+.toolpanel.closed {
+  left: -300px;
 }
 
 .toolpanel.visible {
   display: initial;
+}
+
+.toolpanel .content {
+  padding: 20px;
+  position: relative;
+  height: -webkit-fill-available;
+  height: -ms-fill-available;
+  height: fill-available;
+  height: -moz-fill-available;
 }
 
 .toolpanel .title {
@@ -87,6 +103,28 @@ body {
   border-bottom: 1px solid #ddd;
   color: #333;
   text-transform: uppercase;
+}
+
+.toolpanel .content .hide-show-handler {
+  position: absolute;
+  top: calc(50% - 40px);
+  right: -42px;
+  width: 40px;
+  height: 80px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  cursor: pointer;
+
+  background-image: url('/lib/caret-left.svg');
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.toolpanel.closed .content .hide-show-handler {
+  background-image: url('/lib/caret-right.svg');
 }
 
 .spectrum.with-add-on {
