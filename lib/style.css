@@ -1,0 +1,196 @@
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.default-container {
+  width: 100%;
+  height: 100%;
+  /* display: flex; */
+}
+
+.toolbar {
+  line-height: 0;
+  background-color: #fff;
+  box-shadow: 0 0 3px 0 rgba(50, 50, 50, .25);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toolbar button {
+  width: 64px;
+  height: 54px;
+  opacity: .55;
+  clear: both;
+  border: 0;
+  border-radius: unset;
+  outline: none;
+}
+
+.toolbar button.active,
+.toolbar button:hover {
+  opacity: 1;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  box-shadow: inset 5px 0 10px 0 rgba(50, 50, 50, .1);
+}
+
+.toolbar button img,
+.toolbar button svg {
+  width: 22px;
+  height: 22px;
+}
+
+.main-panel {
+  height: calc(100% - 54px);
+  display: flex;
+}
+
+.canvas-holder {
+  flex: 1;
+  margin: auto;
+}
+
+.canvas-container {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAHUlEQVQ4jWNgYGAQIYAJglEDhoUBg9+FowbQ2gAARjwKARjtnN8AAAAASUVORK5CYII=");
+  background-size: 30px 30px;
+  border: 1px solid #ccc;
+  margin: auto;
+}
+
+.toolpanel {
+  background-color: #f9f9f9;
+  width: 300px;
+  height: 100%;
+  border: 1px solid #ddd;
+  transition: all .4s;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: left;
+  font-size: 13px;
+  color: #777;
+  display: none;
+  overflow: auto;
+}
+
+.toolpanel.visible {
+  display: initial;
+}
+
+.toolpanel .title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+  padding-bottom: 10px;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.spectrum.with-add-on {
+  width: 40px;
+}
+
+#shapes-panel .button {
+  cursor: pointer;
+  line-height: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  margin: 9px;
+}
+
+#background-panel .canvas-size-setting input {
+  width: 60px;
+  background-color: #fff;
+  border-radius: 6px;
+  border: 2px solid #e4e4e4;
+  padding: 4px 10px;
+  line-height: 18px;
+  font-size: 13px;
+}
+
+#select-panel button {
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  text-align: center;
+  outline: none;
+}
+
+#select-panel button svg {
+  opacity: .7;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+#select-panel .text-section .style,
+#select-panel .text-section .family,
+#select-panel .text-section .sizes,
+#select-panel .text-section .align,
+#select-panel .text-section .color {
+  margin-bottom: 20px;
+}
+
+#select-panel .text-section .sizes input {
+  width: 50px;
+}
+
+.toolpanel#select-panel .text-section,
+.toolpanel#select-panel .effect-section {
+  display: none;
+}
+
+.toolpanel#select-panel.type-textbox .text-section {
+  display: block;
+}
+
+.toolpanel#select-panel.type-textbox .fill-section {
+  display: none;
+}
+
+.toolpanel#select-panel.type-image .effect-section {
+  display: block;
+}
+
+.toolpanel#select-panel.type-image .fill-section {
+  display: none;
+}
+
+.download-modal-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #3333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.download-modal-content {
+  background: white;
+  width: max-content;
+  padding: 20px;
+}
+
+.download-modal-content .button-download {
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 3px;
+}
+
+.download-modal-content .button-download:hover {
+  background: #ccc;
+  transition: 0.3s;
+}
