@@ -172,6 +172,7 @@ body {
   font-size: 13px;
 }
 
+#select-panel .text-section .style button,
 #select-panel .alignment-section button,
 #select-panel .object-options button {
   padding: 0;
