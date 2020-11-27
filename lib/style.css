@@ -266,6 +266,18 @@ body {
   width: 50%;
 }
 
+.toolpanel .input-container select {
+  width: 50%;
+  height: 29px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.toolpanel .input-container .sp-replacer {
+  width: 50%;
+}
+
 .toolpanel .input-container .custom-number-input {
   background: #ebebeb;
   display: flex;
@@ -324,4 +336,8 @@ body {
 
 .tab-container .tabs .tab-label.active {
   color: black
+}
+
+.gradient-orientation-container {
+  padding-top: 40px;
 }
