@@ -2,6 +2,15 @@
   <head>
     <link rel="stylesheet" href="/lib/style.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+      jQuery.fn.outerHTML = function() {
+        return jQuery('<div />').append(this.eq(0).clone()).html();
+      };
+      Number.prototype.countDecimals = function () {
+        if(Math.floor(this.valueOf()) === this.valueOf()) return 0;
+        return this.toString().split(".")[1].length || 0; 
+      }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.3/fabric.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.js"></script>
@@ -30,6 +39,7 @@
     <script src="./lib/utils.js"></script>
     <script src="./lib/zoom.js"></script>
     <script src="./lib/saveInBrowser.js"></script>
+
   </head>
   <body>
     <div id="image-editor-container"></div>

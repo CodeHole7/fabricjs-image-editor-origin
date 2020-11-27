@@ -248,3 +248,58 @@ body {
   background: #ccc;
   transition: 0.3s;
 }
+
+.toolpanel .input-container {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.toolpanel .input-container label {
+  width: 50%;
+}
+
+.toolpanel .input-container .custom-number-input {
+  background: #ebebeb;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  height: 30px;
+  background-color: #e4e4e4;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.toolpanel .input-container .custom-number-input button {
+  width: 36px !important;
+  height: 30px !important;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 6px;
+  color: #333;
+  border: 1px solid transparent;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+
+.toolpanel .input-container .custom-number-input input {
+  height: 30px !important;
+  width: 60px !important;
+  background: transparent !important;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.toolpanel .input-container .custom-number-input input::-webkit-outer-spin-button,
+.toolpanel .input-container .custom-number-input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.toolpanel .input-container .custom-number-input input[type=number] {
+  -moz-appearance: textfield;
+}
