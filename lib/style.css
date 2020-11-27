@@ -355,3 +355,11 @@ body {
 .drag-drop-input.dragging {
   border-color: #4368a9;
 }
+
+#tip-container {
+  padding: 10px;
+  text-align: center;
+  touch-action: none;
+  cursor: default;
+  color: #888;
+}
