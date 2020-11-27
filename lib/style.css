@@ -3,6 +3,10 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+.grp-handler-cp-c {
+  margin-left: -20px;
+}
+
 .default-container {
   width: 100%;
   height: 100%;
@@ -168,7 +172,8 @@ body {
   font-size: 13px;
 }
 
-#select-panel button {
+#select-panel .alignment-section button,
+#select-panel .object-options button {
   padding: 0;
   width: 32px;
   height: 32px;
@@ -302,4 +307,20 @@ body {
 /* Firefox */
 .toolpanel .input-container .custom-number-input input[type=number] {
   -moz-appearance: textfield;
+}
+
+.tab-container .tabs {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab-container .tabs .tab-label {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.tab-container .tabs .tab-label.active {
+  color: black
 }
