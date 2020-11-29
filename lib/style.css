@@ -15,7 +15,7 @@ body {
 
 .toolbar {
   line-height: 0;
-  background-color: #fff;
+  background-color: #f2f2f2;
   box-shadow: 0 0 3px 0 rgba(50, 50, 50, .25);
   display: flex;
   justify-content: space-between;
