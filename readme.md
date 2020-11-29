@@ -3,6 +3,11 @@ This image editor allows users to draw default shapes, pen-drawing, line, curve 
 
 [Demo!](https://fabricjs-image-editor-f62330.netlify.app)
 ![Positioning Example](screenshots/editor.jpg)
+
+## Dependency
+jQuery v5.3.1
+Fabric.js v3.6.3
+
 ## Initialize
 ```javascript
   // define toolbar buttons to show
