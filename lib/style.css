@@ -208,6 +208,14 @@ body {
   display: none;
 }
 
+.toolpanel#select-panel.type-group .border-section {
+  display: none;
+}
+
+.toolpanel#select-panel.type-group .fill-section {
+  display: none;
+}
+
 .toolpanel#select-panel.type-textbox .text-section {
   display: block;
 }
