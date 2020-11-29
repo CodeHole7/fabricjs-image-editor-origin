@@ -1,8 +1,9 @@
 # Fabric.JS Image Editor
-
+[Demo!](https://fabricjs-image-editor-f62330.netlify.app)
+![Positioning Example](screenshots/editor.jpg)
 ## Initialize
 ```javascript
-// define toolbar buttons to show
+  // define toolbar buttons to show
   // if this value is undefined or its length is 0, default toolbar buttons will be shown
   const buttons = [
     'select',
@@ -29,4 +30,11 @@
   ];
 
   var imgEditor = new ImageEditor('#image-editor-container', buttons, shapes);
+```
+
+## Save/Load Editor status
+
+```javascript
+  let status = imgEditor.getCanvasJSON();
+  imgEditor.setCanvasStatus(status);
 ```
